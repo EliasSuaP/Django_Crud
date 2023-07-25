@@ -1,0 +1,21 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Artista</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for artista in artistas %}
+                    <tr>
+                      <th scope="row">{{ forloop.counter }}</th>
+                      <td>{{ artista.name }}</td>
+                    </tr>
+        {% endfor %}
+    </tbody>
+  </table>
+
+{% endblock %}
